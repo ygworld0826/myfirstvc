@@ -1,3 +1,150 @@
 .hide {
   display: none;
 }
+
+/* ✅ 배경 설정 (사이버펑크 느낌) */
+body {
+  font-family: 'Orbitron', sans-serif;
+  /* SF 스타일 폰트 */
+  background: radial-gradient(circle at center, #020024 0%, #090979 35%, #00d4ff 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+/* ✅ 3D 스타일 컨테이너 */
+.container {
+  width: 420px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 40px;
+  border-radius: 25px;
+  box-shadow: 0px 0px 20px rgba(0, 255, 255, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  transition: all 0.3s ease-in-out;
+  border: 2px solid rgba(0, 255, 255, 0.3);
+}
+
+.container:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 40px rgba(0, 255, 255, 0.8);
+}
+
+/* ✅ 제목 중앙 정렬 */
+h1 {
+  text-align: center;
+  font-size: 26px;
+  font-weight: bold;
+  color: #00d4ff;
+  text-shadow: 0px 0px 10px rgba(0, 255, 255, 0.8);
+}
+
+/* ✅ 입력 필드 박스 (네온 효과) */
+.input-group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  border: 2px solid rgba(0, 255, 255, 0.3);
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.4);
+  margin-bottom: 15px;
+  box-shadow: 0px 0px 15px rgba(0, 255, 255, 0.2);
+}
+
+/* ✅ 라벨 스타일 */
+.input-group label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #00d4ff;
+  text-shadow: 0px 0px 5px rgba(0, 255, 255, 0.7);
+}
+
+/* ✅ 입력 필드 스타일 */
+.input-group input {
+  width: 90%;
+  padding: 12px;
+  border: 2px solid rgba(0, 255, 255, 0.3);
+  border-radius: 6px;
+  font-size: 14px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #00d4ff;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.input-group input:focus {
+  outline: none;
+  border: 2px solid rgba(0, 255, 255, 0.8);
+  box-shadow: 0px 0px 20px rgba(0, 255, 255, 0.8);
+}
+
+/* ✅ 유효성 검사 메시지 스타일 */
+.success-message {
+  color: #00ff00;
+  font-size: 12px;
+  margin-top: 5px;
+  text-shadow: 0px 0px 5px rgba(0, 255, 0, 0.8);
+}
+
+.failure-message,
+.mismatch-message {
+  color: #ff0033;
+  font-size: 12px;
+  margin-top: 5px;
+  text-shadow: 0px 0px 5px rgba(255, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+}
+
+/* ❌ 아이콘과 메시지 정렬 */
+.failure-message::before,
+.mismatch-message::before {
+  content: "⚠️";
+  margin-right: 5px;
+}
+
+/* ✅ 숨김 클래스 */
+.hide {
+  display: none;
+}
+
+/* ✅ 회원가입 버튼 */
+.submit-container {
+  width: 100%;
+  text-align: center;
+  margin-top: 15px;
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(90deg, #ff00ff, #00d4ff);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: not-allowed;
+  box-shadow: 0px 0px 15px rgba(255, 0, 255, 0.5);
+  transition: all 0.3s ease-in-out;
+  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
+}
+
+button:enabled {
+  cursor: pointer;
+  background: linear-gradient(90deg, #ff0080, #00ffff);
+  box-shadow: 0px 0px 25px rgba(255, 0, 255, 0.8);
+}
+
+button:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 0px 30px rgba(255, 0, 255, 1);
+}
